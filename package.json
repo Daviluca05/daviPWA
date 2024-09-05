@@ -3,9 +3,21 @@
   "version": "1.0.0",
   "main": "service-worker.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "terser src/script.js -o dist/script.min.js",
+    "build-css": "postcss src/styles.css -o dist/styles.min.css"
   },
   "author": "davi",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.45",
+    "postcss-cli": "^11.0.0",
+    "terser": "^5.31.6",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
